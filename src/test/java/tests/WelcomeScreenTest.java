@@ -11,8 +11,9 @@ public class WelcomeScreenTest extends BaseTest {
     private HomePage homePage;
     private static final int REQUIRED_CLICKS = 3;
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void initializePages() {
+        super.setUp();
         welcomeScreen = new WelcomeScreen(driver);
         homePage = new HomePage(driver);
         navigateThroughWelcomeScreens();
@@ -25,7 +26,7 @@ public class WelcomeScreenTest extends BaseTest {
         welcomeScreen.clickClose();
     }
 
-    @Test(priority = 1, description = "Verify expense recording functionality")
+    @Test(priority = 1, description = "Verify expense recording functionality", groups = {"expense", "sanity"})
     public void shouldRecordExpenseSuccessfully() {
         int expenseAmount = 100;
         homePage.recordExpense(expenseAmount, "Bills");
@@ -34,7 +35,7 @@ public class WelcomeScreenTest extends BaseTest {
         Assert.assertTrue(homePage.validateBalanceText(expenseAmount), "Balance should be displayed");
     }
 
-    @Test(priority = 2, description = "Verify income recording functionality")
+    @Test(priority = 2, description = "Verify income recording functionality", groups = {"income", "regression"})
     public void shouldRecordIncomeSuccessfully() {
         int incomeAmount = 100;
         homePage.recordIncome(incomeAmount, "Deposits");
@@ -43,7 +44,7 @@ public class WelcomeScreenTest extends BaseTest {
         Assert.assertTrue(homePage.validateBalanceText(incomeAmount), "Balance should be displayed");
     }
 
-    @Test(priority = 3, description = "Verify budget mode")
+    @Test(priority = 3, description = "Verify budget mode", groups = {"budget", "regression"})
     public void shouldEnterBudgetMode() {
         int budgetAmount = 150;
         homePage.setBudgetMode(budgetAmount);

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Test Suite">
+    <!-- Run all tests -->
+    <test name="All Tests">
+        <classes>
+            <class name="tests.WelcomeScreenTest"/>
+        </classes>
+    </test>
+
+    <!-- Run only expense tests -->
+    <test name="Expense Tests">
+        <groups>
+            <run>
+                <include name="expense"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.WelcomeScreenTest"/>
+        </classes>
+    </test>
+
+    <!-- Run income and budget tests -->
+    <test name="Income and Budget Tests">
+        <groups>
+            <run>
+                <include name="income"/>
+                <include name="budget"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.WelcomeScreenTest"/>
+        </classes>
+    </test>
+</suite> 

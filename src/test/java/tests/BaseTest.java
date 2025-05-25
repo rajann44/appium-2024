@@ -12,13 +12,13 @@ import utils.TestListeners;
 public class BaseTest {
     protected AndroidDriver driver;
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void setUp() {
         // Just get the existing driver instance without resetting
         driver = DriverManager.getDriver();
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void tearDown() {
         DriverManager.quitDriver();
     }

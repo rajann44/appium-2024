@@ -1,4 +1,4 @@
-# Appium Test Automation Framework
+# Monefy Test Automation Framework
 
 A robust mobile test automation framework built with Appium, designed for scalability and maintainability. This framework helps you write and maintain high-quality mobile tests efficiently.
 

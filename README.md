@@ -31,7 +31,7 @@ The screenshot above shows the test execution results from our framework, demons
 1. Clone and setup:
    ```bash
    git clone [repository-url]
-   cd appium-2024
+   cd monefy-app-test-automation
    npm install -g appium
    mvn clean install
    ```

@@ -9,7 +9,7 @@ import pages.HomePage;
 public class WelcomeScreenTest extends BaseTest {
     private WelcomeScreen welcomeScreen;
     private HomePage homePage;
-    private static final int REQUIRED_CLICKS = 4;
+    private static final int REQUIRED_CLICKS = 3;
 
     @BeforeMethod
     public void initializePages() {

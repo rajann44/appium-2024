@@ -4,6 +4,7 @@ import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import java.net.URI;
 import config.AppiumConfig;
+import java.io.File;
 
 public class DriverManager {
     private static AndroidDriver driver;
@@ -23,13 +24,11 @@ public class DriverManager {
             capabilities.setCapability("appium:platformVersion", AppiumConfig.Device.getPlatformVersion());
             capabilities.setCapability("appium:udid", AppiumConfig.Device.getUdid());
             capabilities.setCapability("appium:automationName", AppiumConfig.Device.getAutomationName());
-            capabilities.setCapability("appium:appPackage", AppiumConfig.App.getPackage());
-            capabilities.setCapability("appium:appActivity", AppiumConfig.App.getActivity());
+            capabilities.setCapability("appium:app", new File("src/main/resources/app.apk").getAbsolutePath());
             capabilities.setCapability("appium:noReset", AppiumConfig.App.getNoReset());
             capabilities.setCapability("appium:autoGrantPermissions", AppiumConfig.App.getAutoGrantPermissions());
-            
-            // Grant notification permission
-            capabilities.setCapability("appium:autoGrantPermissions", true);
+            capabilities.setCapability("appium:appActivity", AppiumConfig.App.getActivity());
+            capabilities.setCapability("appium:appPackage", AppiumConfig.App.getPackage());
 
             driver = new AndroidDriver(URI.create(AppiumConfig.Server.getUrl()).toURL(), capabilities);
             driver.manage().timeouts().implicitlyWait(AppiumConfig.Server.getImplicitWait());

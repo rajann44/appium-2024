@@ -2,6 +2,12 @@
 
 A robust mobile test automation framework built with Appium, designed for scalability and maintainability. This framework helps you write and maintain high-quality mobile tests efficiently.
 
+## Test Results
+
+![Test Execution Results](https://github.com/user-attachments/assets/ef8bec1a-4c76-4b08-a126-00472053907e)
+
+The screenshot above shows the test execution results from our framework, demonstrating successful test runs and detailed reporting capabilities.
+
 ## Tech Stack
 
 - **Appium**: Cross-platform mobile testing
@@ -55,9 +61,3 @@ A robust mobile test automation framework built with Appium, designed for scalab
 - **Scalability**: Modular design with Page Object Model
 - **Maintainability**: Centralized configuration and reusable components
 - **Reporting**: Detailed HTML reports with failure screenshots
-
-## Test Results
-
-![Test Execution Results](https://github.com/user-attachments/assets/ef8bec1a-4c76-4b08-a126-00472053907e)
-
-The screenshot above shows the test execution results from our framework, demonstrating successful test runs and detailed reporting capabilities.

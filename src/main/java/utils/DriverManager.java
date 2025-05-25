@@ -20,9 +20,6 @@ public class DriverManager {
         try {
             var capabilities = new DesiredCapabilities();
             capabilities.setCapability("platformName", AppiumConfig.Device.getPlatformName());
-            capabilities.setCapability("appium:deviceName", AppiumConfig.Device.getName());
-            capabilities.setCapability("appium:platformVersion", AppiumConfig.Device.getPlatformVersion());
-            capabilities.setCapability("appium:udid", AppiumConfig.Device.getUdid());
             capabilities.setCapability("appium:automationName", AppiumConfig.Device.getAutomationName());
             capabilities.setCapability("appium:app", new File("src/main/resources/app.apk").getAbsolutePath());
             capabilities.setCapability("appium:noReset", AppiumConfig.App.getNoReset());

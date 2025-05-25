@@ -28,4 +28,7 @@ Thumbs.db
 
 # Logs
 *.log
-logs/ 
+logs/
+
+# Reports
+reports/*.html 

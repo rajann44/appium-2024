@@ -4,7 +4,7 @@
     <!-- Run all tests -->
     <test name="All Tests">
         <classes>
-            <class name="tests.WelcomeScreenTest"/>
+            <class name="tests.ExpenseTests"/>
         </classes>
     </test>
 
@@ -16,7 +16,7 @@
             </run>
         </groups>
         <classes>
-            <class name="tests.WelcomeScreenTest"/>
+            <class name="tests.ExpenseTests"/>
         </classes>
     </test>
 
@@ -29,7 +29,7 @@
             </run>
         </groups>
         <classes>
-            <class name="tests.WelcomeScreenTest"/>
+            <class name="tests.ExpenseTests"/>
         </classes>
     </test>
 </suite> 

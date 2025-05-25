@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import pages.WelcomeScreen;
 import pages.HomePage;
 
-public class WelcomeScreenTest extends BaseTest {
+public class ExpenseTests extends BaseTest {
     private WelcomeScreen welcomeScreen;
     private HomePage homePage;
     private static final int REQUIRED_CLICKS = 3;
